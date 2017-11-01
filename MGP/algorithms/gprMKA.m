@@ -12,8 +12,7 @@ G=G+sn2*eye(na);
 % construct an MMF of A
 tic
 mmf1 = MMF(G,params);
-% C++ codes
-% det = mmf1.determinant();
+% Call pMMF function
 Kstar=mmf1.submatrix(1:n, n+1:na);
 mmf1.invert();
 U = mmf1.submatrix(1:na, n+1:na);
